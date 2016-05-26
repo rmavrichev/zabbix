@@ -1,5 +1,5 @@
 #ZABBIX TEMPLATES
-A collection of Zabbix templates. 
+A collection of Zabbix templates.
 
 #Templates
 
