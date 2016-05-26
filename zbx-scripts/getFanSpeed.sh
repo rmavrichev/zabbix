@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Used in IBM IMM2 template, for fan speed monitoring.
+# On CentOS7, put it in /usr/lib/zabbix/externalscripts/
 
 snmp_community=$1
 ip=$2
