@@ -9,7 +9,7 @@ ZBX_CISCO => templats to discover and manage specific capabilities of Cisco devi
 
 #Used MIB`s
 
-See MIBLIST.txt
+See <a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-templates/MIBLIST.txt">MIBLIST</a>
 
 
 #Requirements
