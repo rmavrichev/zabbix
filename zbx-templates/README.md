@@ -3,9 +3,28 @@ A collection of Zabbix templates.
 
 #Templates
 
-ZBX_SNMP  => template to discover and manage basic capabilities of SNMP devices.
+<a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-templates/ZBX_ICMP.txt">ZBX_ICMP</a>        => template for monitoring of ICMP devices.
 
-ZBX_CISCO => templats to discover and manage specific capabilities of Cisco devices.
+<a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-templates/ZBX_SNMP.txt">ZBX_SNMP</a>        => template for monitoring the basic capabilities of SNMP network devices. Can be used together with more specific templates.
+
+<a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-templates/ZBX_CISCO.txt">ZBX_CISCO</a>      => template to discover and manage specific capabilities of Cisco devices.
+
+<a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-templates/ZBX_JUNIPER.txt">ZBX_JUNIPER</a>  => template to discover and manage specific capabilities of Juniper devices.
+
+<a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-templates/ZBX_IBM-IMM2.txt">ZBX_IBM-IMM2</a => template for IBM IMM2 devices.
+
+<a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-templates/ZBX_MEDIANT.txt">ZBX_MEDIANT</a>  => template for monitoring alarms from Audiocodes Mediant (M2K) voice gateways.
+
+<a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-templates/ZBX_ZSERVER.txt">ZBX_ZSERVER</a>  => template for Zabbix servers.
+
+<a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-templates/ZBX_ZPROXY.txt">ZBX_ZPROXY</a>    => template for Zabbix proxies.
+
+<a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-templates/ZBX_AGENT.txt">ZBX_AGENT</a>      => template for Zabbix agents.
+
+<a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-templates/ZBX_MYSQL.txt">ZBX_MYSQL</a>      => template for basis minitoring of MySQL databases.
+
+<a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-templates/ZBX_VMWARE.txt">ZBX_VMWARE</a>    => templates for discovery  of VMWare clusters, hypervisors and VM`s.
+
 
 #Used MIB`s
 
