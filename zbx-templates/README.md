@@ -11,7 +11,7 @@ A collection of Zabbix templates.
 
 <a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-templates/ZBX_JUNIPER.xml">ZBX_JUNIPER</a>  => template to discover and manage specific capabilities of Juniper network devices.
 
-<a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-templates/ZBX_IBM-IMM2.xml">ZBX_IBM-IMM2</a => template for IBM IMM2 devices.
+<a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-templates/ZBX_IBM-IMM2.xml">ZBX_IBM-IMM2</a>=> template for IBM IMM2 devices.
 
 <a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-templates/ZBX_MEDIANT.xml">ZBX_MEDIANT</a>  => template for monitoring alarms from Audiocodes Mediant (M2K) voice gateways.
 
