@@ -30,6 +30,11 @@ A collection of Zabbix templates.
 
 See <a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-templates/MIBLIST.txt">MIBLIST</a>
 
+#Used Valuemaps
+
+<a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-templates/zbx_ciscoEnvMonState_valuemap.xml">ciscoEnvMonState</a>
+
+<a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-templates/zbx_IMM2-systemhealt_valuemap.xml">IBM_IMM2</a>
 
 #Requirements
 
