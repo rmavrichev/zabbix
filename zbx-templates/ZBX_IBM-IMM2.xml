@@ -380,7 +380,7 @@
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>getFanSpeed.sh[npE982nsdfaSD,{HOST.CONN},{#SNMPINDEX}]</key>
+                            <key>getFanSpeed.sh[public,{HOST.CONN},{#SNMPINDEX}]</key>
                             <delay>300</delay>
                             <history>10</history>
                             <trends>365</trends>
