@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>3.0</version>
-    <date>2016-09-09T08:02:53Z</date>
+    <date>2016-09-08T13:49:58Z</date>
     <groups>
         <group>
             <name>My Templates</name>
@@ -9,8 +9,8 @@
     </groups>
     <templates>
         <template>
-            <template>Basic SNMP Network Device</template>
-            <name>Basic SNMP Network Device</name>
+            <template>Basic IBM gbESM switch SNMP</template>
+            <name>Basic IBM gbESM switch SNMP</name>
             <description/>
             <groups>
                 <group>
@@ -32,6 +32,264 @@
                 </application>
             </applications>
             <items>
+                <item>
+                    <name>Hardware MAC address</name>
+                    <type>4</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <multiplier>0</multiplier>
+                    <snmp_oid>1.3.6.1.4.1.1872.2.5.1.3.1.13.0</snmp_oid>
+                    <key>agHwMacAddr</key>
+                    <delay>3600</delay>
+                    <history>10</history>
+                    <trends>0</trends>
+                    <status>0</status>
+                    <value_type>1</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port>{$SNMP_PORT}</port>
+                    <description>Hardware MAC address</description>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Inventory</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                </item>
+                <item>
+                    <name>Hardware Part Number</name>
+                    <type>4</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <multiplier>0</multiplier>
+                    <snmp_oid>1.3.6.1.4.1.1872.2.5.1.3.1.1.0</snmp_oid>
+                    <key>agHwPartNum</key>
+                    <delay>3600</delay>
+                    <history>10</history>
+                    <trends>0</trends>
+                    <status>0</status>
+                    <value_type>1</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port>{$SNMP_PORT}</port>
+                    <description>Hardware Part Number</description>
+                    <inventory_link>29</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Inventory</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                </item>
+                <item>
+                    <name>Image Version</name>
+                    <type>4</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <multiplier>0</multiplier>
+                    <snmp_oid>1.3.6.1.4.1.1872.2.5.1.3.1.14.0</snmp_oid>
+                    <key>agImgVer</key>
+                    <delay>3600</delay>
+                    <history>10</history>
+                    <trends>0</trends>
+                    <status>0</status>
+                    <value_type>1</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port>{$SNMP_PORT}</port>
+                    <description>Image Version</description>
+                    <inventory_link>5</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Inventory</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                </item>
+                <item>
+                    <name>Serial number</name>
+                    <type>4</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <multiplier>0</multiplier>
+                    <snmp_oid>1.3.6.1.4.1.1872.2.5.1.3.1.18.0</snmp_oid>
+                    <key>agSerNum</key>
+                    <delay>3600</delay>
+                    <history>10</history>
+                    <trends>0</trends>
+                    <status>0</status>
+                    <value_type>1</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port>{$SNMP_PORT}</port>
+                    <description>Serial number</description>
+                    <inventory_link>8</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Inventory</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                </item>
+                <item>
+                    <name>Snutdown temp sensor</name>
+                    <type>4</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <multiplier>0</multiplier>
+                    <snmp_oid>1.3.6.1.4.1.1872.2.5.1.3.1.23.0</snmp_oid>
+                    <key>agShutTemp</key>
+                    <delay>300</delay>
+                    <history>10</history>
+                    <trends>0</trends>
+                    <status>0</status>
+                    <value_type>1</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port>{$SNMP_PORT}</port>
+                    <description>Snutdown temp sensor</description>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>System</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                </item>
+                <item>
+                    <name>Warning temp sensor</name>
+                    <type>4</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <multiplier>0</multiplier>
+                    <snmp_oid>1.3.6.1.4.1.1872.2.5.1.3.1.22.0</snmp_oid>
+                    <key>agWarnTemp</key>
+                    <delay>300</delay>
+                    <history>10</history>
+                    <trends>0</trends>
+                    <status>0</status>
+                    <value_type>1</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port>{$SNMP_PORT}</port>
+                    <description>Warning temp sensor</description>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>System</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                </item>
                 <item>
                     <name>Device ICMP availability</name>
                     <type>3</type>
@@ -164,12 +422,12 @@
                     <logtimefmt>hh:mm:ss yyyy/MM/dd</logtimefmt>
                 </item>
                 <item>
-                    <name>SNMP BGP4-MIB traps</name>
+                    <name>gbESM-CONFIG-MAN-trap</name>
                     <type>17</type>
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>snmptrap[&quot;(BGP4-MIB::bgpBackwardTransition|BGP4-MIB::bgpEstablished)&quot;]</key>
+                    <key>snmptrap[&quot;1872.2.5.7.0.28&quot;]</key>
                     <delay>0</delay>
                     <history>10</history>
                     <trends>0</trends>
@@ -467,199 +725,6 @@
             </items>
             <discovery_rules>
                 <discovery_rule>
-                    <name>Inventory</name>
-                    <type>4</type>
-                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                    <snmp_oid>discovery[{#SERNUM},.1.3.6.1.2.1.47.1.1.1.1.11]</snmp_oid>
-                    <key>entPhysicalSerialNum</key>
-                    <delay>86400</delay>
-                    <status>0</status>
-                    <allowed_hosts/>
-                    <snmpv3_contextname/>
-                    <snmpv3_securityname/>
-                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                    <snmpv3_authpassphrase/>
-                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                    <snmpv3_privpassphrase/>
-                    <delay_flex/>
-                    <params/>
-                    <ipmi_sensor/>
-                    <authtype>0</authtype>
-                    <username/>
-                    <password/>
-                    <publickey/>
-                    <privatekey/>
-                    <port>{$SNMP_PORT}</port>
-                    <filter>
-                        <evaltype>0</evaltype>
-                        <formula/>
-                        <conditions>
-                            <condition>
-                                <macro>{#SERNUM}</macro>
-                                <value>^([0-9a-zA-Z]+)$</value>
-                                <operator>8</operator>
-                                <formulaid>A</formulaid>
-                            </condition>
-                        </conditions>
-                    </filter>
-                    <lifetime>10</lifetime>
-                    <description>Searches the ENTITY-MIB for the chassis components, use S/N as key.&#13;
-&#13;
-SerialNumbers - it's a regular expression, defined as:&#13;
-^([0-9a-zA-Z]+)$[TRUE]</description>
-                    <item_prototypes>
-                        <item_prototype>
-                            <name>Descr for S/N &quot;{#SERNUM}&quot;</name>
-                            <type>4</type>
-                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                            <multiplier>0</multiplier>
-                            <snmp_oid>1.3.6.1.2.1.47.1.1.1.1.2.{#SNMPINDEX}</snmp_oid>
-                            <key>inv.entPhysicalDescr[{#SERNUM}]</key>
-                            <delay>86400</delay>
-                            <history>10</history>
-                            <trends>0</trends>
-                            <status>0</status>
-                            <value_type>1</value_type>
-                            <allowed_hosts/>
-                            <units/>
-                            <delta>0</delta>
-                            <snmpv3_contextname/>
-                            <snmpv3_securityname/>
-                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                            <snmpv3_authpassphrase/>
-                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                            <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
-                            <params/>
-                            <ipmi_sensor/>
-                            <data_type>0</data_type>
-                            <authtype>0</authtype>
-                            <username/>
-                            <password/>
-                            <publickey/>
-                            <privatekey/>
-                            <port>{$SNMP_PORT}</port>
-                            <description/>
-                            <inventory_link>0</inventory_link>
-                            <applications>
-                                <application>
-                                    <name>Inventory</name>
-                                </application>
-                            </applications>
-                            <valuemap/>
-                            <logtimefmt/>
-                            <application_prototypes/>
-                        </item_prototype>
-                        <item_prototype>
-                            <name>PName for S/N &quot;{#SERNUM}&quot;</name>
-                            <type>4</type>
-                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                            <multiplier>0</multiplier>
-                            <snmp_oid>1.3.6.1.2.1.47.1.1.1.1.13.{#SNMPINDEX}</snmp_oid>
-                            <key>inv.entPhysicalModelName[{#SERNUM}]</key>
-                            <delay>86400</delay>
-                            <history>10</history>
-                            <trends>0</trends>
-                            <status>0</status>
-                            <value_type>1</value_type>
-                            <allowed_hosts/>
-                            <units/>
-                            <delta>0</delta>
-                            <snmpv3_contextname/>
-                            <snmpv3_securityname/>
-                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                            <snmpv3_authpassphrase/>
-                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                            <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
-                            <params/>
-                            <ipmi_sensor/>
-                            <data_type>0</data_type>
-                            <authtype>0</authtype>
-                            <username/>
-                            <password/>
-                            <publickey/>
-                            <privatekey/>
-                            <port>{$SNMP_PORT}</port>
-                            <description/>
-                            <inventory_link>0</inventory_link>
-                            <applications>
-                                <application>
-                                    <name>Inventory</name>
-                                </application>
-                            </applications>
-                            <valuemap/>
-                            <logtimefmt/>
-                            <application_prototypes/>
-                        </item_prototype>
-                        <item_prototype>
-                            <name>Name for S/N &quot;{#SERNUM}&quot;</name>
-                            <type>4</type>
-                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                            <multiplier>0</multiplier>
-                            <snmp_oid>1.3.6.1.2.1.47.1.1.1.1.7.{#SNMPINDEX}</snmp_oid>
-                            <key>inv.entPhysicalName[{#SERNUM}]</key>
-                            <delay>86400</delay>
-                            <history>10</history>
-                            <trends>0</trends>
-                            <status>0</status>
-                            <value_type>1</value_type>
-                            <allowed_hosts/>
-                            <units/>
-                            <delta>0</delta>
-                            <snmpv3_contextname/>
-                            <snmpv3_securityname/>
-                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                            <snmpv3_authpassphrase/>
-                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                            <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
-                            <params/>
-                            <ipmi_sensor/>
-                            <data_type>0</data_type>
-                            <authtype>0</authtype>
-                            <username/>
-                            <password/>
-                            <publickey/>
-                            <privatekey/>
-                            <port>{$SNMP_PORT}</port>
-                            <description/>
-                            <inventory_link>0</inventory_link>
-                            <applications>
-                                <application>
-                                    <name>Inventory</name>
-                                </application>
-                            </applications>
-                            <valuemap/>
-                            <logtimefmt/>
-                            <application_prototypes/>
-                        </item_prototype>
-                    </item_prototypes>
-                    <trigger_prototypes>
-                        <trigger_prototype>
-                            <expression>{Basic SNMP Network Device:inv.entPhysicalDescr[{#SERNUM}].str(this_does_not_exist)}=1 and {Basic SNMP Network Device:inv.entPhysicalName[{#SERNUM}].str(this_does_not_exist)}=1</expression>
-                            <name>Module in {HOST.NAME} S/N:&quot;{#SERNUM}&quot; Descr:&quot;{ITEM.VALUE1}&quot; Name:&quot;{ITEM.VALUE2}&quot;</name>
-                            <url>events.php?triggerid={TRIGGER.ID}</url>
-                            <status>0</status>
-                            <priority>3</priority>
-                            <description>Used only if module moved or removed, when triggers go from 'normal' to 'unknown' (and back). &#13;
-See &#13;
-https://www.zabbix.com/documentation/2.2/manual/config/notifications/unsupported_item</description>
-                            <type>0</type>
-                            <dependencies/>
-                        </trigger_prototype>
-                    </trigger_prototypes>
-                    <graph_prototypes/>
-                    <host_prototypes/>
-                </discovery_rule>
-                <discovery_rule>
                     <name>Interfaces discovery</name>
                     <type>4</type>
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
@@ -690,9 +755,9 @@ https://www.zabbix.com/documentation/2.2/manual/config/notifications/unsupported
                         <conditions>
                             <condition>
                                 <macro>{#IFNAME}</macro>
-                                <value>^(Vl.*|Tu.*|Po.*|Gi.*|ge.*|ae.*)$</value>
+                                <value>^(INT.*|EXT.*)$</value>
                                 <operator>8</operator>
-                                <formulaid>C</formulaid>
+                                <formulaid>B</formulaid>
                             </condition>
                             <condition>
                                 <macro>{#IFADMINSTATUS}</macro>
@@ -700,70 +765,15 @@ https://www.zabbix.com/documentation/2.2/manual/config/notifications/unsupported
                                 <operator>8</operator>
                                 <formulaid>A</formulaid>
                             </condition>
-                            <condition>
-                                <macro>{#IFALIAS}</macro>
-                                <value>@Filter_by_Alias</value>
-                                <operator>8</operator>
-                                <formulaid>B</formulaid>
-                            </condition>
                         </conditions>
                     </filter>
                     <lifetime>10</lifetime>
                     <description>This discovery rule find interfaces what match this criteria:&#13;
 {#IFADMINSTATUS}     1&#13;
-{#IFALIAS}                      @Find_Int_by_Alias&#13;
-{#IFNAME}                     ^(Vl.*|Tu.*|Po.*|Gi.*|ge.*|ae.*)$&#13;
+{#IFNAME}                     ^(INT.*|EXT.*)$&#13;
 &#13;
-{$SNMP_COMMUNITY} it's a global macro: defined as 'public' by default.&#13;
-&#13;
-Filter_by_Alias - it's a regular expression, defined as:&#13;
-^(DISABLED.*)$	[False]&#13;
-^$	[False]</description>
+{$SNMP_COMMUNITY} it's a global macro: defined as 'public' by default.</description>
                     <item_prototypes>
-                        <item_prototype>
-                            <name>Alias of  {#IFNAME}</name>
-                            <type>4</type>
-                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                            <multiplier>0</multiplier>
-                            <snmp_oid>IF-MIB::ifAlias.{#SNMPINDEX}</snmp_oid>
-                            <key>ifAlias[{#IFNAME}]</key>
-                            <delay>3600</delay>
-                            <history>10</history>
-                            <trends>0</trends>
-                            <status>0</status>
-                            <value_type>1</value_type>
-                            <allowed_hosts/>
-                            <units/>
-                            <delta>0</delta>
-                            <snmpv3_contextname/>
-                            <snmpv3_securityname/>
-                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                            <snmpv3_authpassphrase/>
-                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                            <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
-                            <params/>
-                            <ipmi_sensor/>
-                            <data_type>0</data_type>
-                            <authtype>0</authtype>
-                            <username/>
-                            <password/>
-                            <publickey/>
-                            <privatekey/>
-                            <port>{$SNMP_PORT}</port>
-                            <description>Interface description (ifAlias).</description>
-                            <inventory_link>0</inventory_link>
-                            <applications>
-                                <application>
-                                    <name>Interfaces</name>
-                                </application>
-                            </applications>
-                            <valuemap/>
-                            <logtimefmt/>
-                            <application_prototypes/>
-                        </item_prototype>
                         <item_prototype>
                             <name>Bytes RX on {#IFNAME}</name>
                             <type>4</type>
@@ -1121,8 +1131,8 @@ Filter_by_Alias - it's a regular expression, defined as:&#13;
                     </item_prototypes>
                     <trigger_prototypes>
                         <trigger_prototype>
-                            <expression>{Basic SNMP Network Device:snmptrap[&quot;(linkDown|linkUp)((.|[[:space:]])*)(ifIndex.{#SNMPINDEX}\s)&quot;].regexp(linkDown)} and {Basic SNMP Network Device:snmptrap[&quot;(linkDown|linkUp)((.|[[:space:]])*)(ifIndex.{#SNMPINDEX}\s)&quot;].nodata(30m)}=0</expression>
-                            <name>Int {#IFNAME}:{#IFALIAS} on {HOST.NAME} DOWN</name>
+                            <expression>{Basic IBM gbESM switch SNMP:snmptrap[&quot;(linkDown|linkUp)((.|[[:space:]])*)(ifIndex.{#SNMPINDEX}\s)&quot;].regexp(linkDown)} and {Basic IBM gbESM switch SNMP:snmptrap[&quot;(linkDown|linkUp)((.|[[:space:]])*)(ifIndex.{#SNMPINDEX}\s)&quot;].nodata(30m)}=0</expression>
+                            <name>Int {#IFNAME} on {HOST.NAME} DOWN</name>
                             <url>events.php?triggerid={TRIGGER.ID}</url>
                             <status>0</status>
                             <priority>4</priority>
@@ -1131,8 +1141,8 @@ Filter_by_Alias - it's a regular expression, defined as:&#13;
                             <dependencies/>
                         </trigger_prototype>
                         <trigger_prototype>
-                            <expression>{Basic SNMP Network Device:ifHCOutOctets[{#IFNAME}].max(30m)}/{Basic SNMP Network Device:ifSpeed[{#IFNAME}].last()}&gt;0.8 or {Basic SNMP Network Device:ifHCInOctets[{#IFNAME}].max(30m)}/{Basic SNMP Network Device:ifSpeed[{#IFNAME}].last()}&gt;0.8</expression>
-                            <name>TX/RX congestion on: {HOST.NAME}:{#IFNAME}:{#IFALIAS}</name>
+                            <expression>{Basic IBM gbESM switch SNMP:ifHCOutOctets[{#IFNAME}].max(30m)}/{Basic IBM gbESM switch SNMP:ifSpeed[{#IFNAME}].last()}&gt;0.8 or {Basic IBM gbESM switch SNMP:ifHCInOctets[{#IFNAME}].max(30m)}/{Basic IBM gbESM switch SNMP:ifSpeed[{#IFNAME}].last()}&gt;0.8</expression>
+                            <name>TX/RX congestion on: {HOST.NAME}:{#IFNAME}</name>
                             <url>events.php?triggerid={TRIGGER.ID}</url>
                             <status>0</status>
                             <priority>3</priority>
@@ -1141,8 +1151,8 @@ Filter_by_Alias - it's a regular expression, defined as:&#13;
                             <dependencies/>
                         </trigger_prototype>
                         <trigger_prototype>
-                            <expression>{Basic SNMP Network Device:ifInErrors[{#IFNAME}].abschange()}+{Basic SNMP Network Device:ifOutErrors[{#IFNAME}].abschange()}&gt;10</expression>
-                            <name>TX/RX errors on: {HOST.NAME}:{#IFNAME}:{#IFALIAS}</name>
+                            <expression>{Basic IBM gbESM switch SNMP:ifInErrors[{#IFNAME}].abschange()}+{Basic IBM gbESM switch SNMP:ifOutErrors[{#IFNAME}].abschange()}&gt;10</expression>
+                            <name>TX/RX errors on: {HOST.NAME}:{#IFNAME}</name>
                             <url>events.php?triggerid={TRIGGER.ID}</url>
                             <status>0</status>
                             <priority>3</priority>
@@ -1153,7 +1163,7 @@ Filter_by_Alias - it's a regular expression, defined as:&#13;
                     </trigger_prototypes>
                     <graph_prototypes>
                         <graph_prototype>
-                            <name>Int {#IFNAME} ({#IFALIAS}) on {{HOST.HOST}:sysName.last(0)}</name>
+                            <name>Int {#IFNAME} on {{HOST.HOST}:sysName.last(0)}</name>
                             <width>900</width>
                             <height>200</height>
                             <yaxismin>0.0000</yaxismin>
@@ -1178,7 +1188,7 @@ Filter_by_Alias - it's a regular expression, defined as:&#13;
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Basic SNMP Network Device</host>
+                                        <host>Basic IBM gbESM switch SNMP</host>
                                         <key>ifHCInOctets[{#IFNAME}]</key>
                                     </item>
                                 </graph_item>
@@ -1190,7 +1200,7 @@ Filter_by_Alias - it's a regular expression, defined as:&#13;
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Basic SNMP Network Device</host>
+                                        <host>Basic IBM gbESM switch SNMP</host>
                                         <key>ifHCOutOctets[{#IFNAME}]</key>
                                     </item>
                                 </graph_item>
@@ -1202,7 +1212,7 @@ Filter_by_Alias - it's a regular expression, defined as:&#13;
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Basic SNMP Network Device</host>
+                                        <host>Basic IBM gbESM switch SNMP</host>
                                         <key>ifInUcastPkts[{#IFNAME}]</key>
                                     </item>
                                 </graph_item>
@@ -1214,7 +1224,7 @@ Filter_by_Alias - it's a regular expression, defined as:&#13;
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Basic SNMP Network Device</host>
+                                        <host>Basic IBM gbESM switch SNMP</host>
                                         <key>ifOutUcastPkts[{#IFNAME}]</key>
                                     </item>
                                 </graph_item>
@@ -1226,7 +1236,7 @@ Filter_by_Alias - it's a regular expression, defined as:&#13;
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Basic SNMP Network Device</host>
+                                        <host>Basic IBM gbESM switch SNMP</host>
                                         <key>ifInErrors[{#IFNAME}]</key>
                                     </item>
                                 </graph_item>
@@ -1238,7 +1248,7 @@ Filter_by_Alias - it's a regular expression, defined as:&#13;
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Basic SNMP Network Device</host>
+                                        <host>Basic IBM gbESM switch SNMP</host>
                                         <key>ifOutErrors[{#IFNAME}]</key>
                                     </item>
                                 </graph_item>
@@ -1273,7 +1283,7 @@ Filter_by_Alias - it's a regular expression, defined as:&#13;
                             <sort_triggers>0</sort_triggers>
                             <resource>
                                 <key>icmpping</key>
-                                <host>Basic SNMP Network Device</host>
+                                <host>Basic IBM gbESM switch SNMP</host>
                             </resource>
                             <max_columns>3</max_columns>
                             <application/>
@@ -1285,17 +1295,17 @@ Filter_by_Alias - it's a regular expression, defined as:&#13;
     </templates>
     <triggers>
         <trigger>
-            <expression>{Basic SNMP Network Device:snmptrap[&quot;(BGP4-MIB::bgpBackwardTransition|BGP4-MIB::bgpEstablished)&quot;].regexp(bgpBackwardTransition)} and {Basic SNMP Network Device:snmptrap[&quot;(BGP4-MIB::bgpBackwardTransition|BGP4-MIB::bgpEstablished)&quot;].nodata(1h)}=0</expression>
-            <name>BGP BackwardTransition on {HOST.NAME}</name>
+            <expression>{Basic IBM gbESM switch SNMP:snmptrap[&quot;1872.2.5.7.0.28&quot;].regexp(New configuration saved)} and {Basic IBM gbESM switch SNMP:snmptrap[&quot;1872.2.5.7.0.28&quot;].nodata(1h)}=0</expression>
+            <name>gbESM startup config changed on {HOST.NAME}</name>
             <url>events.php?triggerid={TRIGGER.ID}</url>
             <status>0</status>
-            <priority>2</priority>
+            <priority>0</priority>
             <description/>
             <type>0</type>
             <dependencies/>
         </trigger>
         <trigger>
-            <expression>{Basic SNMP Network Device:snmptrap.fallback.regexp(SNMPv2-MIB::authenticationFailure)} and {Basic SNMP Network Device:snmptrap.fallback.nodata(1h)}=0</expression>
+            <expression>{Basic IBM gbESM switch SNMP:snmptrap.fallback.regexp(SNMPv2-MIB::authenticationFailure)} and {Basic IBM gbESM switch SNMP:snmptrap.fallback.nodata(1h)}=0</expression>
             <name>Login Auth Error on {HOST.NAME}</name>
             <url>events.php?triggerid={TRIGGER.ID}</url>
             <status>0</status>
@@ -1305,7 +1315,7 @@ Filter_by_Alias - it's a regular expression, defined as:&#13;
             <dependencies/>
         </trigger>
         <trigger>
-            <expression>{Basic SNMP Network Device:icmpping.nodata(15m)}=1</expression>
+            <expression>{Basic IBM gbESM switch SNMP:icmpping.nodata(15m)}=1</expression>
             <name>No ICMP data from {HOST.NAME}</name>
             <url>events.php?triggerid={TRIGGER.ID}</url>
             <status>0</status>
@@ -1315,7 +1325,7 @@ Filter_by_Alias - it's a regular expression, defined as:&#13;
             <dependencies/>
         </trigger>
         <trigger>
-            <expression>{Basic SNMP Network Device:zabbix[host,snmp,available].last()}&lt;1</expression>
+            <expression>{Basic IBM gbESM switch SNMP:zabbix[host,snmp,available].last()}&lt;1</expression>
             <name>SNMP unavailable on {HOST.NAME}</name>
             <url>events.php?triggerid={TRIGGER.ID}</url>
             <status>0</status>
@@ -1325,12 +1335,12 @@ Filter_by_Alias - it's a regular expression, defined as:&#13;
             <dependencies>
                 <dependency>
                     <name>{HOST.NAME} is DOWN</name>
-                    <expression>{Basic SNMP Network Device:icmpping.max(#3)}=0</expression>
+                    <expression>{Basic IBM gbESM switch SNMP:icmpping.max(#3)}=0</expression>
                 </dependency>
             </dependencies>
         </trigger>
         <trigger>
-            <expression>{Basic SNMP Network Device:sysUpTime.last(0)}&lt;600</expression>
+            <expression>{Basic IBM gbESM switch SNMP:sysUpTime.last(0)}&lt;600</expression>
             <name>{HOST.NAME} has been restarted</name>
             <url>events.php?triggerid={TRIGGER.ID}</url>
             <status>0</status>
@@ -1340,7 +1350,7 @@ Filter_by_Alias - it's a regular expression, defined as:&#13;
             <dependencies/>
         </trigger>
         <trigger>
-            <expression>{Basic SNMP Network Device:icmpping.max(#3)}=0</expression>
+            <expression>{Basic IBM gbESM switch SNMP:icmpping.max(#3)}=0</expression>
             <name>{HOST.NAME} is DOWN</name>
             <url>events.php?triggerid={TRIGGER.ID}</url>
             <status>0</status>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>3.0</version>
-    <date>2016-09-09T07:45:35Z</date>
+    <date>2016-09-09T07:43:45Z</date>
     <groups>
         <group>
             <name>My Templates</name>
@@ -9,8 +9,8 @@
     </groups>
     <templates>
         <template>
-            <template>Basic ICMP Network Device</template>
-            <name>Basic ICMP Network Device</name>
+            <template>Basic Broadworks icmp and traps</template>
+            <name>Basic Broadworks icmp and traps</name>
             <description/>
             <groups>
                 <group>
@@ -19,12 +19,12 @@
             </groups>
             <applications>
                 <application>
-                    <name>System</name>
+                    <name>BW SNMP trap</name>
                 </application>
             </applications>
             <items>
                 <item>
-                    <name>ICMP availability</name>
+                    <name>Device ICMP availability</name>
                     <type>3</type>
                     <snmp_community/>
                     <multiplier>0</multiplier>
@@ -52,7 +52,7 @@
                     <data_type>0</data_type>
                     <authtype>0</authtype>
                     <username/>
-                    <password/>
+                    <password>qwe123!@#</password>
                     <publickey/>
                     <privatekey/>
                     <port/>
@@ -60,7 +60,7 @@
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>System</name>
+                            <name>BW SNMP trap</name>
                         </application>
                     </applications>
                     <valuemap>
@@ -69,19 +69,19 @@
                     <logtimefmt/>
                 </item>
                 <item>
-                    <name>ICMP loss</name>
-                    <type>3</type>
+                    <name>SNMP fallback traps</name>
+                    <type>17</type>
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>icmppingloss</key>
-                    <delay>60</delay>
+                    <key>snmptrap.fallback</key>
+                    <delay>0</delay>
                     <history>10</history>
-                    <trends>365</trends>
+                    <trends>0</trends>
                     <status>0</status>
-                    <value_type>0</value_type>
+                    <value_type>2</value_type>
                     <allowed_hosts/>
-                    <units>%</units>
+                    <units/>
                     <delta>0</delta>
                     <snmpv3_contextname/>
                     <snmpv3_securityname/>
@@ -105,26 +105,26 @@
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>System</name>
+                            <name>BW SNMP trap</name>
                         </application>
                     </applications>
                     <valuemap/>
-                    <logtimefmt/>
+                    <logtimefmt>hh:mm:ss yyyy/MM/dd</logtimefmt>
                 </item>
                 <item>
-                    <name>ICMP response time</name>
-                    <type>3</type>
+                    <name>Diameter Peer Connection</name>
+                    <type>17</type>
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>icmppingsec</key>
-                    <delay>60</delay>
+                    <key>snmptrap[&quot;bwXsExternalPeerConnectionFailure&quot;]</key>
+                    <delay>0</delay>
                     <history>10</history>
-                    <trends>365</trends>
+                    <trends>0</trends>
                     <status>0</status>
-                    <value_type>0</value_type>
+                    <value_type>2</value_type>
                     <allowed_hosts/>
-                    <units>s</units>
+                    <units/>
                     <delta>0</delta>
                     <snmpv3_contextname/>
                     <snmpv3_securityname/>
@@ -148,7 +148,7 @@
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>System</name>
+                            <name>BW SNMP trap</name>
                         </application>
                     </applications>
                     <valuemap/>
@@ -161,7 +161,7 @@
                     <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>zbxhostname.sh[&quot;{HOST.NAME}&quot;]</key>
-                    <delay>86400</delay>
+                    <delay>60</delay>
                     <history>90</history>
                     <trends>0</trends>
                     <status>0</status>
@@ -196,7 +196,7 @@ echo $1&#13;
                     <inventory_link>3</inventory_link>
                     <applications>
                         <application>
-                            <name>System</name>
+                            <name>BW SNMP trap</name>
                         </application>
                     </applications>
                     <valuemap/>
@@ -204,49 +204,41 @@ echo $1&#13;
                 </item>
             </items>
             <discovery_rules/>
-            <macros>
-                <macro>
-                    <macro>{$SNMP_COMMUNITY}</macro>
-                    <value>public</value>
-                </macro>
-            </macros>
+            <macros/>
             <templates/>
             <screens>
                 <screen>
-                    <name>Basic Parameters</name>
+                    <name>System performance</name>
                     <hsize>1</hsize>
-                    <vsize>1</vsize>
-                    <screen_items>
-                        <screen_item>
-                            <resourcetype>0</resourcetype>
-                            <width>1000</width>
-                            <height>100</height>
-                            <x>0</x>
-                            <y>0</y>
-                            <colspan>1</colspan>
-                            <rowspan>1</rowspan>
-                            <elements>0</elements>
-                            <valign>0</valign>
-                            <halign>0</halign>
-                            <style>0</style>
-                            <url/>
-                            <dynamic>0</dynamic>
-                            <sort_triggers>0</sort_triggers>
-                            <resource>
-                                <name>ICMP availability of {{HOSTNAME}:zbxhostname.sh[&quot;{HOST.NAME}&quot;].last(0)}</name>
-                                <host>Basic ICMP Network Device</host>
-                            </resource>
-                            <max_columns>3</max_columns>
-                            <application/>
-                        </screen_item>
-                    </screen_items>
+                    <vsize>2</vsize>
+                    <screen_items/>
                 </screen>
             </screens>
         </template>
     </templates>
     <triggers>
         <trigger>
-            <expression>{Basic ICMP Network Device:icmpping.nodata(15m)}=1</expression>
+            <expression>{Basic Broadworks icmp and traps:snmptrap[&quot;bwXsExternalPeerConnectionFailure&quot;].regexp(alarmState.*1)}=1</expression>
+            <name>Diameter peer is DOWN on {HOST.NAME}</name>
+            <url>events.php?triggerid={TRIGGER.ID}</url>
+            <status>0</status>
+            <priority>4</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{Basic Broadworks icmp and traps:snmptrap[&quot;bwXsExternalPeerConnectionFailure&quot;].regexp(alarmState.*0)}=1 and {Basic Broadworks icmp and traps:snmptrap[&quot;bwXsExternalPeerConnectionFailure&quot;].nodata(60)}=0</expression>
+            <name>Diameter peer is UP on {HOST.NAME}</name>
+            <url>events.php?triggerid={TRIGGER.ID}</url>
+            <status>0</status>
+            <priority>1</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{Basic Broadworks icmp and traps:icmpping.nodata(15m)}=1</expression>
             <name>No ICMP data from {HOST.NAME}</name>
             <url>events.php?triggerid={TRIGGER.ID}</url>
             <status>0</status>
@@ -256,37 +248,17 @@ echo $1&#13;
             <dependencies/>
         </trigger>
         <trigger>
-            <expression>{Basic ICMP Network Device:icmppingloss.min(5m)}&gt;20</expression>
-            <name>Ping loss is too high on {HOST.NAME}</name>
-            <url/>
-            <status>0</status>
-            <priority>2</priority>
+            <expression>{Basic Broadworks icmp and traps:snmptrap.fallback.nodata(300)}=0</expression>
+            <name>Unmatched SNMP trap received from {HOST.NAME}</name>
+            <url>events.php?triggerid={TRIGGER.ID}</url>
+            <status>1</status>
+            <priority>1</priority>
             <description/>
             <type>0</type>
-            <dependencies>
-                <dependency>
-                    <name>{HOST.NAME} is DOWN</name>
-                    <expression>{Basic ICMP Network Device:icmpping.max(#3)}=0</expression>
-                </dependency>
-            </dependencies>
+            <dependencies/>
         </trigger>
         <trigger>
-            <expression>{Basic ICMP Network Device:icmppingsec.avg(5m)}&gt;0.15</expression>
-            <name>Response time is too high on {HOST.NAME}</name>
-            <url/>
-            <status>0</status>
-            <priority>2</priority>
-            <description/>
-            <type>0</type>
-            <dependencies>
-                <dependency>
-                    <name>{HOST.NAME} is DOWN</name>
-                    <expression>{Basic ICMP Network Device:icmpping.max(#3)}=0</expression>
-                </dependency>
-            </dependencies>
-        </trigger>
-        <trigger>
-            <expression>{Basic ICMP Network Device:icmpping.max(#3)}=0</expression>
+            <expression>{Basic Broadworks icmp and traps:icmpping.max(#3)}=0</expression>
             <name>{HOST.NAME} is DOWN</name>
             <url>events.php?triggerid={TRIGGER.ID}</url>
             <status>0</status>
@@ -296,64 +268,6 @@ echo $1&#13;
             <dependencies/>
         </trigger>
     </triggers>
-    <graphs>
-        <graph>
-            <name>ICMP availability of {{HOSTNAME}:zbxhostname.sh[&quot;{HOST.NAME}&quot;].last(0)}</name>
-            <width>900</width>
-            <height>200</height>
-            <yaxismin>0.0000</yaxismin>
-            <yaxismax>100.0000</yaxismax>
-            <show_work_period>1</show_work_period>
-            <show_triggers>1</show_triggers>
-            <type>0</type>
-            <show_legend>1</show_legend>
-            <show_3d>0</show_3d>
-            <percent_left>0.0000</percent_left>
-            <percent_right>0.0000</percent_right>
-            <ymin_type_1>0</ymin_type_1>
-            <ymax_type_1>0</ymax_type_1>
-            <ymin_item_1>0</ymin_item_1>
-            <ymax_item_1>0</ymax_item_1>
-            <graph_items>
-                <graph_item>
-                    <sortorder>0</sortorder>
-                    <drawtype>5</drawtype>
-                    <color>00CC00</color>
-                    <yaxisside>1</yaxisside>
-                    <calc_fnc>2</calc_fnc>
-                    <type>0</type>
-                    <item>
-                        <host>Basic ICMP Network Device</host>
-                        <key>icmpping</key>
-                    </item>
-                </graph_item>
-                <graph_item>
-                    <sortorder>1</sortorder>
-                    <drawtype>0</drawtype>
-                    <color>CC0000</color>
-                    <yaxisside>1</yaxisside>
-                    <calc_fnc>2</calc_fnc>
-                    <type>0</type>
-                    <item>
-                        <host>Basic ICMP Network Device</host>
-                        <key>icmppingloss</key>
-                    </item>
-                </graph_item>
-                <graph_item>
-                    <sortorder>2</sortorder>
-                    <drawtype>0</drawtype>
-                    <color>0000C8</color>
-                    <yaxisside>0</yaxisside>
-                    <calc_fnc>2</calc_fnc>
-                    <type>0</type>
-                    <item>
-                        <host>Basic ICMP Network Device</host>
-                        <key>icmppingsec</key>
-                    </item>
-                </graph_item>
-            </graph_items>
-        </graph>
-    </graphs>
     <value_maps>
         <value_map>
             <name>Service state</name>

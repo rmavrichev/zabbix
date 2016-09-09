@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>3.0</version>
-    <date>2016-05-26T13:52:07Z</date>
+    <date>2016-09-09T07:44:22Z</date>
     <groups>
         <group>
             <name>My Templates</name>
@@ -896,7 +896,7 @@ events.php?triggerid={TRIGGER.ID}&amp;period=3600</description>
             <name>IP SLA violated on {HOST.NAME}</name>
             <url>events.php?triggerid={TRIGGER.ID}</url>
             <status>0</status>
-            <priority>3</priority>
+            <priority>1</priority>
             <description/>
             <type>0</type>
             <dependencies/>
