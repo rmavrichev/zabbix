@@ -67,7 +67,7 @@ use Fcntl qw(O_WRONLY O_APPEND O_CREAT); use POSIX qw(strftime); sub zabbix_rece
                         $x->[1] =~ s/\R//g; #delete carriage return
                         $x->[1] =~ s/Hex-STRING://g; #delete word
                         $x->[1] =~ tr/ //d; #delete spaces
-                        $x->[1] = pack "H*",$x->[1] ; #convert to asciii
+#                        $x->[1] = pack "H*",$x->[1] ; #convert to asciii
                         $x->[1]= "Hex-STRING: ".$x->[1];
                 }
                printf OUTPUT_FILE " %-30s type=%-2d value=%s\n", $x->[0], $x->[2], $x->[1];
