@@ -3,28 +3,45 @@ A collection of Zabbix templates.
 
 #Templates
 
-<a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-templates/ZBX_ICMP.xml">ZBX_ICMP</a>        => template for monitoring of ICMP devices.
+<a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-templates/ZBX_ICMP.xml">ZBX_ICMP</a>        => template for monitoring of ICMP devices (any kind of device what have icmp support).
 
-<a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-templates/ZBX_SNMP.xml">ZBX_SNMP</a>        => template for monitoring the basic capabilities of SNMP network devices.
+<a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-templates/ZBX_SNMP.xml">ZBX_SNMP</a>        => template for monitoring the basic capabilities of SNMP network devices (Cisco, Juniper, etc.).
 
-<a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-templates/ZBX_CISCO.xml">ZBX_CISCO</a>      => template to discover and manage specific capabilities of Cisco network devices.
+<a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-templates/ZBX_CISCO.xml">ZBX_CISCO</a>      => template to discover and manage specific capabilities of Cisco network devices (tested on cisco ISR 28xx/29xx/39xx and swithes c2960x, c3750) .
 
-<a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-templates/ZBX_JUNIPER.xml">ZBX_JUNIPER</a>  => template to discover and manage specific capabilities of Juniper network devices.
+<a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-templates/ZBX_CISCO_DHCP_SNOOPING.xml">ZBX_CISCO_DHCP_SNOOPING</a>      => template for monitoring of Cisco switch DHCP snooping database (IP/Port binding).
 
-<a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-templates/ZBX_IBM-IMM2.xml">ZBX_IBM-IMM2</a> => template for IBM IMM2 devices.
+<a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-templates/ZBX_CISCO_WLC.xml">ZBX_CISCO_WLC</a>      => template to discover and manage specific capabilities of Cisco WLC Wireless controllers.
+
+<a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-templates/ZBX_JUNIPER.xml">ZBX_JUNIPER</a>  => template to discover and manage specific capabilities of Juniper network devices (testet on SRX240).
+
+<a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-templates/ZBX_IBM_IMM2.xml">ZBX_IBM_IMM2</a> => template for IBM IMM2 devices.
+
+<a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-templates/ZBX_IBM_GBESM_SW.xml">ZBX_IBM_GBESM_SW</a> => template for IBM GbESM Blade Switch devices.
 
 <a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-templates/ZBX_MEDIANT.xml">ZBX_MEDIANT</a>  => template for monitoring alarms from Audiocodes Mediant (M2K) voice gateways.
 
-<a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-templates/ZBX_ZSERVER.xml">ZBX_ZSERVER</a>  => template for Zabbix servers.
+<a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-templates/ZBX_BROADWORKS.xml">ZBX_BROADWORKS</a>  => template for monitoring alarms from Broadworks SBC voice device.
 
-<a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-templates/ZBX_ZPROXY.xml">ZBX_ZPROXY</a>    => template for Zabbix proxies.
+<a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-templates/ZBX_BROADWORKS_EMS.xml">ZBX_BROADWORKS_EMS</a>  => template for monitoring alarms from Broadworks EMS monitoring system.
+
+<a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-templates/ZBX_ZSERVER.xml">ZBX_ZSERVER</a>  => template for Zabbix servers with zabbix agent.
+
+<a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-templates/ZBX_ZPROXY.xml">ZBX_ZPROXY</a>    => template for Zabbix proxies with zabbix agent.
 
 <a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-templates/ZBX_AGENT.xml">ZBX_AGENT</a>      => template for Zabbix agents.
 
-<a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-templates/ZBX_MYSQL.xml">ZBX_MYSQL</a>      => template for basis minitoring of MySQL databases.
+<a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-templates/ZBX_MYSQL.xml">ZBX_MYSQL</a>      => template for basis minitoring of MySQL databases with zabbix agent.
 
-<a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-templates/ZBX_VMWARE.xml">ZBX_VMWARE</a>    => templates for discovery  of VMWare clusters, hypervisors and VM`s.
+<a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-templates/ZBX_VMWARE_CLUSTER.xml">ZBX_VMWARE_CLUSTER</a>    => templates for discovery  of VMWare clusters.
 
+<a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-templates/ZBX_VMWARE_GUEST.xml">ZBX_VMWARE_GUEST</a>    => templates for discovery  of VMWare VM`s.
+
+<a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-templates/ZBX_VMWARE_HYPERVISOR.xml">ZBX_VMWARE_HYPERVISOR</a>    => templates for discovery  of VMWare hypervisors.
+
+<a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-templates/ZBX_LINUX.xml">ZBX_LINUX</a>    => templates for Linux servers with zabbix agent.
+
+<a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-templates/ZBX_WINDOWS.xml">ZBX_WINDOWS</a>    => templates for Windows servers with zabbix agent.
 
 #Used MIB`s
 
