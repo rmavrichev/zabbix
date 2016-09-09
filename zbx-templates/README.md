@@ -43,6 +43,28 @@ A collection of Zabbix templates.
 
 <a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-templates/ZBX_WINDOWS.xml">ZBX_WINDOWS</a>    => templates for Windows servers with zabbix agent.
 
+#Used Scripts:
+
+See <a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-scripts/zbxhostname.sh">zbxhostname.sh</a>    => used for Hostname item in several templates.
+
+See <a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-scripts/getFanSpeed.sh">getFanSpeed.sh</a>    => used in <a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-templates/ZBX_IBM_IMM2.xml">ZBX_IBM_IMM2</a> template.
+
+See <a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-scripts/getdhcpIP.sh">getdhcpIP.sh</a>    => used in <a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-templates/ZBX_CISCO_DHCP_SNOOPING.xml">ZBX_CISCO_DHCP_SNOOPING</a> template.
+
+See <a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-scripts/ciscoGetConfig.sh">ciscoGetConfig.sh</a>    => used for download Cisco`s config to TFTP server with SNMP write.
+
+See <a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-scripts/hwGetConfig.sh">hwGetConfig.sh</a>    => used for download Huawei`s config to TFTP server with SNMP write.
+
+#Other usable things:
+
+See <a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-scripts/snmptrapd.conf">snmptrapd.conf</a>    => Sample of snmptrapd.conf file.
+
+See <a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-scripts/snmptrapd.conf">zabbix_trap_receiver.pl</a>    => Sample of zabbix_trap_receiver.pl file.
+
+See <a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-scripts/.my.cnf">.my.cnf</a>    => Used for NYSQL monitoring with Zabbix agent.
+
+See <a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-scripts/userparameter_mysql.conf">userparameter_mysql.conf</a>    => Used for NYSQL monitoring with Zabbix agent.
+
 #Used MIB`s
 
 See <a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-templates/MIBLIST.txt">MIBLIST</a>
