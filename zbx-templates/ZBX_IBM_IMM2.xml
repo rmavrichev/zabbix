@@ -380,7 +380,7 @@
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>getFanSpeed.sh[npE982nsdfaSD,{HOST.CONN},{#SNMPINDEX}]</key>
+                            <key>getFanSpeed.sh[{$SNMP_COMMUNITY},{HOST.CONN},{#SNMPINDEX}]</key>
                             <delay>300</delay>
                             <history>10</history>
                             <trends>365</trends>
@@ -441,7 +441,7 @@ exit 0&#13;
                     </item_prototypes>
                     <trigger_prototypes>
                         <trigger_prototype>
-                            <expression>{Basic IBM - IMM2 SNMP:getFanSpeed.sh[npE982nsdfaSD,{HOST.CONN},{#SNMPINDEX}].last()}&lt;25</expression>
+                            <expression>{Basic IBM - IMM2 SNMP:getFanSpeed.sh[{$SNMP_COMMUNITY},{HOST.CONN},{#SNMPINDEX}].last()}&lt;25</expression>
                             <name>Fan speed to low on: {HOST.NAME}:{#FANDESCR}</name>
                             <url>events.php?triggerid={TRIGGER.ID}</url>
                             <status>0</status>
