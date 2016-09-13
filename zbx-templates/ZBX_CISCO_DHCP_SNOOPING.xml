@@ -114,7 +114,7 @@
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>getdhcpIP.sh[npE982nsdfaSD,{HOST.CONN},{#SNMPINDEX}]</key>
+                            <key>getdhcpIP.sh[{$SNMP_COMMUNITY},{HOST.CONN},{#SNMPINDEX}]</key>
                             <delay>60</delay>
                             <history>10</history>
                             <trends>0</trends>
