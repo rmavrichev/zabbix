@@ -49,6 +49,8 @@ See <a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-scripts/zbxhos
 
 See <a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-scripts/getFanSpeed.sh">getFanSpeed.sh</a>    => used in <a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-templates/ZBX_IBM_IMM2.xml">ZBX_IBM_IMM2</a> template.
 
+See <a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-scripts/getGbESMtemp.sh">getGbESMtemp.sh</a>    => used in <a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-templates/ZBX_IBM_GBESM_SW.xml">ZBX_IBM_GBESM_SW</a> template.
+
 See <a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-scripts/getdhcpIP.sh">getdhcpIP.sh</a>    => used in <a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-templates/ZBX_CISCO_DHCP_SNOOPING.xml">ZBX_CISCO_DHCP_SNOOPING</a> template.
 
 See <a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-scripts/ciscoGetConfig.sh">ciscoGetConfig.sh</a>    => used for download Cisco`s config to TFTP server with SNMP write.
