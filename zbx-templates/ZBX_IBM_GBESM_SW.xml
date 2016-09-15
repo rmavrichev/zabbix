@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>3.0</version>
-    <date>2016-09-08T13:49:58Z</date>
+    <date>2016-09-15T11:26:24Z</date>
     <groups>
         <group>
             <name>My Templates</name>
@@ -211,7 +211,7 @@
                     <multiplier>0</multiplier>
                     <snmp_oid>1.3.6.1.4.1.1872.2.5.1.3.1.23.0</snmp_oid>
                     <key>agShutTemp</key>
-                    <delay>300</delay>
+                    <delay>3600</delay>
                     <history>10</history>
                     <trends>0</trends>
                     <status>0</status>
@@ -254,7 +254,7 @@
                     <multiplier>0</multiplier>
                     <snmp_oid>1.3.6.1.4.1.1872.2.5.1.3.1.22.0</snmp_oid>
                     <key>agWarnTemp</key>
-                    <delay>300</delay>
+                    <delay>3600</delay>
                     <history>10</history>
                     <trends>0</trends>
                     <status>0</status>
@@ -281,6 +281,49 @@
                     <privatekey/>
                     <port>{$SNMP_PORT}</port>
                     <description>Warning temp sensor</description>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>System</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                </item>
+                <item>
+                    <name>Temperature sensor#1</name>
+                    <type>10</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>getGbESMtemp.sh[{$SNMP_COMMUNITY},{HOST.CONN}]</key>
+                    <delay>300</delay>
+                    <history>10</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>0</value_type>
+                    <allowed_hosts/>
+                    <units>C</units>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
@@ -1340,6 +1383,16 @@
             </dependencies>
         </trigger>
         <trigger>
+            <expression>{Basic IBM gbESM switch SNMP:getGbESMtemp.sh[{$SNMP_COMMUNITY},{HOST.CONN}].last()}&gt;65</expression>
+            <name>Temperature to high on: {HOST.NAME}</name>
+            <url>events.php?triggerid={TRIGGER.ID}</url>
+            <status>0</status>
+            <priority>4</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
             <expression>{Basic IBM gbESM switch SNMP:sysUpTime.last(0)}&lt;600</expression>
             <name>{HOST.NAME} has been restarted</name>
             <url>events.php?triggerid={TRIGGER.ID}</url>
@@ -1360,6 +1413,40 @@
             <dependencies/>
         </trigger>
     </triggers>
+    <graphs>
+        <graph>
+            <name>Temp of  {{HOST.HOST}:sysName.last(0)}</name>
+            <width>900</width>
+            <height>200</height>
+            <yaxismin>0.0000</yaxismin>
+            <yaxismax>100.0000</yaxismax>
+            <show_work_period>1</show_work_period>
+            <show_triggers>1</show_triggers>
+            <type>0</type>
+            <show_legend>1</show_legend>
+            <show_3d>0</show_3d>
+            <percent_left>0.0000</percent_left>
+            <percent_right>0.0000</percent_right>
+            <ymin_type_1>0</ymin_type_1>
+            <ymax_type_1>0</ymax_type_1>
+            <ymin_item_1>0</ymin_item_1>
+            <ymax_item_1>0</ymax_item_1>
+            <graph_items>
+                <graph_item>
+                    <sortorder>0</sortorder>
+                    <drawtype>0</drawtype>
+                    <color>1A7C11</color>
+                    <yaxisside>0</yaxisside>
+                    <calc_fnc>2</calc_fnc>
+                    <type>0</type>
+                    <item>
+                        <host>Basic IBM gbESM switch SNMP</host>
+                        <key>getGbESMtemp.sh[{$SNMP_COMMUNITY},{HOST.CONN}]</key>
+                    </item>
+                </graph_item>
+            </graph_items>
+        </graph>
+    </graphs>
     <value_maps>
         <value_map>
             <name>Service state</name>
