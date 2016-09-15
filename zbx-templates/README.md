@@ -63,7 +63,7 @@ See <a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-scripts/snmptr
 
 See <a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-scripts/snmptrapd.conf">zabbix_trap_receiver.pl</a>    => Sample of zabbix_trap_receiver.pl file.
 
-See <a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-scripts/.my.cnf">.my.cnf</a>    => Used for NYSQL monitoring with Zabbix agent.
+See <a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-scripts/.my.cnf">.my.cnf</a>    => Used for MYSQL monitoring with Zabbix agent.
 
 See <a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-scripts/userparameter_mysql.conf">userparameter_mysql.conf</a>    => Used for NYSQL monitoring with Zabbix agent.
 
