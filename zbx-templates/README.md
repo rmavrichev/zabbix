@@ -9,6 +9,8 @@ A collection of Zabbix templates.
 
 <a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-templates/ZBX_CISCO.xml">ZBX_CISCO</a>      => template to discover and manage specific capabilities of Cisco network devices (tested on cisco ISR 28xx/29xx/39xx and swithes c2960x, c3750) .
 
+<a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-templates/ZBX_CISCO_ASA.xml">ZBX_CISCO_ASA</a>      => template to discover and manage specific capabilities of Cisco ASA firewall.
+
 <a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-templates/ZBX_CISCO_DHCP_SNOOPING.xml">ZBX_CISCO_DHCP_SNOOPING</a>      => template for monitoring of Cisco switch DHCP snooping database (IP/Port binding).
 
 <a href="https://github.com/rmavrichev/zabbix/blob/master/zbx-templates/ZBX_CISCO_WLC.xml">ZBX_CISCO_WLC</a>      => template to discover and manage specific capabilities of Cisco WLC Wireless controllers.
