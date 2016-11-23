@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>3.0</version>
-    <date>2016-09-09T07:44:22Z</date>
+    <date>2016-11-23T11:49:58Z</date>
     <groups>
         <group>
             <name>My Templates</name>
@@ -35,7 +35,7 @@
                     <key>chassisTempAlarm</key>
                     <delay>300</delay>
                     <history>10</history>
-                    <trends>365</trends>
+                    <trends>90</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
@@ -58,7 +58,7 @@
                     <password/>
                     <publickey/>
                     <privatekey/>
-                    <port>161</port>
+                    <port>{$SNMP_PORT}</port>
                     <description/>
                     <inventory_link>0</inventory_link>
                     <applications>
@@ -70,15 +70,15 @@
                     <logtimefmt/>
                 </item>
                 <item>
-                    <name>Memory usage</name>
+                    <name>Memory free (cpu)</name>
                     <type>4</type>
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <multiplier>0</multiplier>
-                    <snmp_oid>.1.3.6.1.4.1.9.9.48.1.1.1.5.1</snmp_oid>
-                    <key>ciscoMemoryPoolUsed</key>
+                    <snmp_oid>.1.3.6.1.4.1.9.9.48.1.1.1.6.1</snmp_oid>
+                    <key>ciscoMemoryPoolFreeCpu</key>
                     <delay>300</delay>
                     <history>10</history>
-                    <trends>365</trends>
+                    <trends>90</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
@@ -101,7 +101,222 @@
                     <password/>
                     <publickey/>
                     <privatekey/>
-                    <port>161</port>
+                    <port>{$SNMP_PORT}</port>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Cisco Enterprise MIB</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                </item>
+                <item>
+                    <name>Memory free (io)</name>
+                    <type>4</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <multiplier>0</multiplier>
+                    <snmp_oid>.1.3.6.1.4.1.9.9.48.1.1.1.6.2</snmp_oid>
+                    <key>ciscoMemoryPoolFreeIo</key>
+                    <delay>300</delay>
+                    <history>10</history>
+                    <trends>90</trends>
+                    <status>0</status>
+                    <value_type>3</value_type>
+                    <allowed_hosts/>
+                    <units>b</units>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port>{$SNMP_PORT}</port>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Cisco Enterprise MIB</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                </item>
+                <item>
+                    <name>MEM usage (cpu)</name>
+                    <type>15</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>ciscoMemoryPoolUsageCpu</key>
+                    <delay>300</delay>
+                    <history>10</history>
+                    <trends>90</trends>
+                    <status>0</status>
+                    <value_type>0</value_type>
+                    <allowed_hosts/>
+                    <units>%</units>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params>100*last(&quot;ciscoMemoryPoolUsedCpu&quot;)/(last(&quot;ciscoMemoryPoolUsedCpu&quot;)+last(&quot;ciscoMemoryPoolFreeCpu&quot;))</params>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Cisco Enterprise MIB</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                </item>
+                <item>
+                    <name>MEM usage (io)</name>
+                    <type>15</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>ciscoMemoryPoolUsageIo</key>
+                    <delay>300</delay>
+                    <history>10</history>
+                    <trends>90</trends>
+                    <status>0</status>
+                    <value_type>0</value_type>
+                    <allowed_hosts/>
+                    <units>%</units>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params>100*last(&quot;ciscoMemoryPoolUsedIo&quot;)/(last(&quot;ciscoMemoryPoolUsedIo&quot;)+last(&quot;ciscoMemoryPoolFreeIo&quot;))</params>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Cisco Enterprise MIB</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                </item>
+                <item>
+                    <name>Memory used (cpu)</name>
+                    <type>4</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <multiplier>0</multiplier>
+                    <snmp_oid>.1.3.6.1.4.1.9.9.48.1.1.1.5.1</snmp_oid>
+                    <key>ciscoMemoryPoolUsedCpu</key>
+                    <delay>300</delay>
+                    <history>10</history>
+                    <trends>90</trends>
+                    <status>0</status>
+                    <value_type>3</value_type>
+                    <allowed_hosts/>
+                    <units>b</units>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port>{$SNMP_PORT}</port>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Cisco Enterprise MIB</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                </item>
+                <item>
+                    <name>Memory used (io)</name>
+                    <type>4</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <multiplier>0</multiplier>
+                    <snmp_oid>.1.3.6.1.4.1.9.9.48.1.1.1.5.2</snmp_oid>
+                    <key>ciscoMemoryPoolUsedIo</key>
+                    <delay>300</delay>
+                    <history>10</history>
+                    <trends>90</trends>
+                    <status>0</status>
+                    <value_type>3</value_type>
+                    <allowed_hosts/>
+                    <units>b</units>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port>{$SNMP_PORT}</port>
                     <description/>
                     <inventory_link>0</inventory_link>
                     <applications>
@@ -156,15 +371,15 @@
                     <logtimefmt/>
                 </item>
                 <item>
-                    <name>CPU Usage</name>
+                    <name>CPU Usage 1m</name>
                     <type>4</type>
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <multiplier>0</multiplier>
-                    <snmp_oid>.1.3.6.1.4.1.9.9.109.1.1.1.1.5.1</snmp_oid>
-                    <key>cpmCPUTotal5min</key>
+                    <snmp_oid>.1.3.6.1.4.1.9.9.109.1.1.1.1.7.1</snmp_oid>
+                    <key>cpmCPUTotal1minRev</key>
                     <delay>300</delay>
                     <history>10</history>
-                    <trends>365</trends>
+                    <trends>90</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
@@ -187,7 +402,93 @@
                     <password/>
                     <publickey/>
                     <privatekey/>
-                    <port>161</port>
+                    <port>{$SNMP_PORT}</port>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Cisco Enterprise MIB</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                </item>
+                <item>
+                    <name>CPU Usage 5m</name>
+                    <type>4</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <multiplier>0</multiplier>
+                    <snmp_oid>.1.3.6.1.4.1.9.9.109.1.1.1.1.8.1</snmp_oid>
+                    <key>cpmCPUTotal5minRev</key>
+                    <delay>300</delay>
+                    <history>10</history>
+                    <trends>90</trends>
+                    <status>0</status>
+                    <value_type>3</value_type>
+                    <allowed_hosts/>
+                    <units>%</units>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port>{$SNMP_PORT}</port>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Cisco Enterprise MIB</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                </item>
+                <item>
+                    <name>CPU Usage 5s</name>
+                    <type>4</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <multiplier>0</multiplier>
+                    <snmp_oid>.1.3.6.1.4.1.9.9.109.1.1.1.1.6.1</snmp_oid>
+                    <key>cpmCPUTotal5secRev</key>
+                    <delay>300</delay>
+                    <history>10</history>
+                    <trends>90</trends>
+                    <status>0</status>
+                    <value_type>3</value_type>
+                    <allowed_hosts/>
+                    <units>%</units>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port>{$SNMP_PORT}</port>
                     <description/>
                     <inventory_link>0</inventory_link>
                     <applications>
@@ -650,7 +951,7 @@
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>discovery[{#SNMPVALUE},.1.3.6.1.4.1.9.9.13.1.3.1.2]</snmp_oid>
                     <key>ciscoEnvMonTemperatureStatusDescr</key>
-                    <delay>86400</delay>
+                    <delay>60</delay>
                     <status>0</status>
                     <allowed_hosts/>
                     <snmpv3_contextname/>
@@ -724,7 +1025,7 @@
                     </item_prototypes>
                     <trigger_prototypes>
                         <trigger_prototype>
-                            <expression>{Basic Cisco SNMP with traps:ciscoEnvMonTemperatureStatusValue[{#SNMPVALUE}].last()}&gt;65</expression>
+                            <expression>{Basic Cisco SNMP with traps:ciscoEnvMonTemperatureStatusValue[{#SNMPVALUE}].last()}&gt;{$CISCO_TEMPERATURE_THR}</expression>
                             <name>Temperature to high on: {HOST.NAME}:{#SNMPVALUE}</name>
                             <url>events.php?triggerid={TRIGGER.ID}</url>
                             <status>0</status>
@@ -771,12 +1072,29 @@
                     <host_prototypes/>
                 </discovery_rule>
             </discovery_rules>
-            <macros/>
+            <macros>
+                <macro>
+                    <macro>{$CISCO_CPU_THR}</macro>
+                    <value>75</value>
+                </macro>
+                <macro>
+                    <macro>{$CISCO_MEMCPU_THR}</macro>
+                    <value>75</value>
+                </macro>
+                <macro>
+                    <macro>{$CISCO_MEMIO_THR}</macro>
+                    <value>75</value>
+                </macro>
+                <macro>
+                    <macro>{$CISCO_TEMPERATURE_THR}</macro>
+                    <value>65</value>
+                </macro>
+            </macros>
             <templates/>
             <screens>
                 <screen>
                     <name>System performance</name>
-                    <hsize>1</hsize>
+                    <hsize>2</hsize>
                     <vsize>2</vsize>
                     <screen_items>
                         <screen_item>
@@ -788,8 +1106,8 @@
                             <colspan>1</colspan>
                             <rowspan>1</rowspan>
                             <elements>0</elements>
-                            <valign>0</valign>
-                            <halign>0</halign>
+                            <valign>1</valign>
+                            <halign>1</halign>
                             <style>0</style>
                             <url/>
                             <dynamic>0</dynamic>
@@ -802,25 +1120,25 @@
                             <application/>
                         </screen_item>
                         <screen_item>
-                            <resourcetype>3</resourcetype>
+                            <resourcetype>20</resourcetype>
                             <width>500</width>
                             <height>100</height>
                             <x>0</x>
                             <y>1</y>
                             <colspan>1</colspan>
                             <rowspan>1</rowspan>
-                            <elements>25</elements>
-                            <valign>0</valign>
-                            <halign>0</halign>
+                            <elements>0</elements>
+                            <valign>1</valign>
+                            <halign>1</halign>
                             <style>0</style>
                             <url/>
                             <dynamic>0</dynamic>
                             <sort_triggers>0</sort_triggers>
                             <resource>
-                                <key>snmptrap[&quot;(CISCO.*MIB)((.|[[:space:]])*)(SLA)&quot;]</key>
+                                <name>Temp of &quot;{#SNMPVALUE}&quot;on {{HOST.HOST}:sysName.last(0)}</name>
                                 <host>Basic Cisco SNMP with traps</host>
                             </resource>
-                            <max_columns>3</max_columns>
+                            <max_columns>2</max_columns>
                             <application/>
                         </screen_item>
                     </screen_items>
@@ -872,8 +1190,28 @@ events.php?triggerid={TRIGGER.ID}&amp;period=3600</description>
             <dependencies/>
         </trigger>
         <trigger>
-            <expression>{Basic Cisco SNMP with traps:cpmCPUTotal5min.last(0)}&gt;70</expression>
+            <expression>{Basic Cisco SNMP with traps:cpmCPUTotal5minRev.last(0)}&gt;{$CISCO_CPU_THR}</expression>
             <name>High CPU load on {HOST.NAME}</name>
+            <url>events.php?triggerid={TRIGGER.ID}</url>
+            <status>0</status>
+            <priority>4</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{Basic Cisco SNMP with traps:ciscoMemoryPoolUsageCpu.last(0)}&gt;{$CISCO_MEMCPU_THR}</expression>
+            <name>High MEM (cpu) usage on {HOST.NAME}</name>
+            <url>events.php?triggerid={TRIGGER.ID}</url>
+            <status>0</status>
+            <priority>4</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{Basic Cisco SNMP with traps:ciscoMemoryPoolUsageIo.last(0)}&gt;{$CISCO_MEMIO_THR}</expression>
+            <name>High MEM (io) usage on {HOST.NAME}</name>
             <url>events.php?triggerid={TRIGGER.ID}</url>
             <status>0</status>
             <priority>4</priority>
@@ -964,17 +1302,41 @@ events.php?triggerid={TRIGGER.ID}&amp;period=3600</description>
                 <graph_item>
                     <sortorder>0</sortorder>
                     <drawtype>0</drawtype>
+                    <color>BBBB00</color>
+                    <yaxisside>0</yaxisside>
+                    <calc_fnc>2</calc_fnc>
+                    <type>0</type>
+                    <item>
+                        <host>Basic Cisco SNMP with traps</host>
+                        <key>cpmCPUTotal5secRev</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>1</sortorder>
+                    <drawtype>0</drawtype>
+                    <color>BB00BB</color>
+                    <yaxisside>0</yaxisside>
+                    <calc_fnc>2</calc_fnc>
+                    <type>0</type>
+                    <item>
+                        <host>Basic Cisco SNMP with traps</host>
+                        <key>cpmCPUTotal1minRev</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>2</sortorder>
+                    <drawtype>0</drawtype>
                     <color>AA0000</color>
                     <yaxisside>0</yaxisside>
                     <calc_fnc>2</calc_fnc>
                     <type>0</type>
                     <item>
                         <host>Basic Cisco SNMP with traps</host>
-                        <key>cpmCPUTotal5min</key>
+                        <key>cpmCPUTotal5minRev</key>
                     </item>
                 </graph_item>
                 <graph_item>
-                    <sortorder>1</sortorder>
+                    <sortorder>3</sortorder>
                     <drawtype>0</drawtype>
                     <color>008800</color>
                     <yaxisside>1</yaxisside>
@@ -982,7 +1344,19 @@ events.php?triggerid={TRIGGER.ID}&amp;period=3600</description>
                     <type>0</type>
                     <item>
                         <host>Basic Cisco SNMP with traps</host>
-                        <key>ciscoMemoryPoolUsed</key>
+                        <key>ciscoMemoryPoolUsageCpu</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>4</sortorder>
+                    <drawtype>0</drawtype>
+                    <color>2774A4</color>
+                    <yaxisside>1</yaxisside>
+                    <calc_fnc>2</calc_fnc>
+                    <type>0</type>
+                    <item>
+                        <host>Basic Cisco SNMP with traps</host>
+                        <key>ciscoMemoryPoolUsageIo</key>
                     </item>
                 </graph_item>
             </graph_items>
